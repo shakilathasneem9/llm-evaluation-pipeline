@@ -154,7 +154,6 @@ Results saved to reports/results.csv
 
 ### Launch the Dashboard
 
-```bash
 streamlit run dashboard/app.py
 ## 📸 Visual Outputs
 
@@ -174,8 +173,7 @@ Live metrics visualization from Streamlit dashboard:
 
 Summary of evaluation results:
 
-![Report](assets/report.png)
----
+![Dashboard](assets/report.png)
 
 ## 📊 Sample Dataset
 
