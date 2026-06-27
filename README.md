@@ -154,7 +154,7 @@ Results saved to reports/results.csv
 
 ### Launch the Dashboard
 
-```bash
+
 streamlit run dashboard/app.py
 ## 📸 Visual Outputs
 
