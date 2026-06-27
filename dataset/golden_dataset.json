@@ -1,0 +1,22 @@
+[
+  {"question":"What is the capital of France?","expected":"Paris"},
+  {"question":"What is the capital of Japan?","expected":"Tokyo"},
+  {"question":"Who invented Python?","expected":"Guido van Rossum"},
+  {"question":"Who developed the theory of relativity?","expected":"Albert Einstein"},
+  {"question":"2+2","expected":"4"},
+  {"question":"10*10","expected":"100"},
+  {"question":"Square root of 64","expected":"8"},
+  {"question":"Which planet is known as the Red Planet?","expected":"Mars"},
+  {"question":"What is the largest ocean?","expected":"Pacific Ocean"},
+  {"question":"What is the chemical symbol for water?","expected":"H2O"},
+  {"question":"Who wrote Romeo and Juliet?","expected":"William Shakespeare"},
+  {"question":"What is the tallest mountain?","expected":"Mount Everest"},
+  {"question":"What language is primarily used for Android development?","expected":"Kotlin"},
+  {"question":"What is the capital of India?","expected":"New Delhi"},
+  {"question":"Who founded Microsoft?","expected":"Bill Gates"},
+  {"question":"What is HTML used for?","expected":"Web pages"},
+  {"question":"What is the speed of light?","expected":"299792458"},
+  {"question":"Which gas do plants absorb?","expected":"Carbon dioxide"},
+  {"question":"Who painted the Mona Lisa?","expected":"Leonardo da Vinci"},
+  {"question":"Which programming language is known for data science?","expected":"Python"}
+]

@@ -1,0 +1,140 @@
+Question,Expected,Actual,Correct,Latency
+What is the capital of France?,Paris,The capital of France is Paris.,True,13.41
+What is the capital of Japan?,Tokyo,The capital of Japan is Tokyo.,True,24.44
+Who invented Python?,Guido van Rossum,"Python was created by Guido van Rossum, a Dutch computer programmer. He began working on the language in the late 1980s and released the first version of Python in 1991. At the time, he was working at the National Research Institute for Mathematics and Computer Science in the Netherlands.
+
+Guido van Rossum chose the name ""Python"" because he was a fan of the British comedy group Monty Python's Flying Circus. He wanted a short and memorable name that would be easy to type on keyboards.
+
+Over the years, Guido continued to work on Python, releasing new versions and adding features to the language. In 2000, he stepped down as the ""Benevolent Dictator for Life"" (BDFL) of the Python project, but remained involved in its development until his retirement in 2018.
+
+Today, Python is one of the most popular programming languages in the world, widely used in various fields such as web development, data science, machine learning, and more.",True,56.92
+Who developed the theory of relativity?,Albert Einstein,"The theory of relativity was developed by Albert Einstein, a renowned German-born physicist. There are actually two main components to Einstein's theory of relativity:
+
+1. **Special Relativity (1905)**: This theory posits that the laws of physics are the same for all observers in uniform motion relative to one another. It introduced the famous equation E=mc² and challenged long-held notions about space, time, and gravity.
+2. **General Relativity (1915)**: This theory builds upon special relativity and introduces the concept of gravity as a curvature of spacetime caused by massive objects. According to general relativity, the presence of mass and energy warps the fabric of spacetime, affecting the motion of objects.
+
+Einstein's work on the theory of relativity revolutionized our understanding of space, time, and gravity, and has had a profound impact on modern physics, astronomy, and engineering.
+
+(Note: There is also a third component to Einstein's work, known as **Quantum Mechanics**, which he contributed to in his later years. However, that's a topic for another time!)",True,51.43
+2+2,4,2 + 2 = 4,True,2.14
+10*10,100,100,True,0.51
+Square root of 64,8,The square root of 64 is 8.,True,2.99
+Which planet is known as the Red Planet?,Mars,"The planet known as the ""Red Planet"" is Mars. This nickname comes from its reddish appearance, which is due to iron oxide (or rust) in the planet's soil and rocks.",True,10.35
+What is the largest ocean?,Pacific Ocean,"The largest of the five oceans is the Pacific Ocean, which covers approximately 155.6 million square kilometers (60.1 million square miles). It accounts for about 46% of the Earth's total ocean area and is also the deepest ocean, with a maximum depth of about 11,022 meters (36,198 feet) in the Mariana Trench.",True,14.67
+What is the chemical symbol for water?,H2O,"The chemical symbol for water is H₂O.
+
+Here's how it works:
+
+* ""H"" represents hydrogen, which is one of the two elements that make up water.
+* The subscript 2 indicates that there are two hydrogen atoms in a molecule of water.
+* The ""O"" represents oxygen, which is the other element that makes up water.
+
+So, H₂O is the chemical formula for water!",False,16.86
+Who wrote Romeo and Juliet?,William Shakespeare,"Romeo and Juliet, the tragic love story of two young lovers from feuding families in Verona, Italy, was written by William Shakespeare. The exact date of its composition is not known, but it is believed to have been written between 1591 and 1595.
+
+Shakespeare's play is based on an earlier narrative poem called ""The Tragicall Historye of Romeus and Juliet"" by Arthur Brooke, which was published in 1562. Shakespeare's version is considered one of the greatest works of literature ever written, and its themes of love, passion, fate, and conflict continue to captivate audiences around the world.
+
+Interestingly, there are some debates among scholars about whether Shakespeare actually wrote Romeo and Juliet himself or if he adapted an earlier work by another author. However, the overwhelming majority of experts agree that Shakespeare was indeed the author of this iconic play.",True,32.39
+What is the tallest mountain?,Mount Everest,"The tallest mountain in the world is Mount Everest, which is located in the Himalayas on the border between Nepal and Tibet, China. It stands at an elevation of 8,848 meters (29,029 feet) above sea level.
+
+However, it's worth noting that there are different ways to measure the height of a mountain, and some sources may list other mountains as being taller due to various factors such as the method of measurement or the definition of a ""mountain"".
+
+For example, Mauna Kea, a dormant volcano on the Big Island of Hawaii, is often considered the tallest mountain in the world when measured from its base on the ocean floor. It stands at an elevation of 4,207 meters (13,796 feet) above sea level, but its total height, including its underwater portion, is over 9,700 meters (31,800 feet).
+
+Other contenders for the title of tallest mountain include:
+
+* Mount Chimborazo in Ecuador, which is slightly shorter than Mount Everest but appears taller due to the Earth's curvature.
+* Mount Kilimanjaro in Tanzania, which is the highest peak in Africa and stands at an elevation of 5,895 meters (19,341 feet) above sea level.
+
+Ultimately, the ""tallest"" mountain is a matter of perspective and depends on how one defines a ""mountain"".",True,69.07
+What language is primarily used for Android development?,Kotlin,"The primary languages used for Android development are:
+
+1. **Java**: This is the most widely used language for Android app development. Java is used to write the majority of the code in an Android app, including the user interface (UI) components, business logic, and data storage.
+2. **Kotlin**: Kotlin is a modern programming language that was designed specifically for Android app development. It's fully interoperable with Java and is gaining popularity as it provides more concise and expressive syntax.
+
+Both Java and Kotlin are used to develop Android apps, but Kotlin has become increasingly popular in recent years due to its simplicity, safety features, and compatibility with Java.
+
+Additionally, some developers may also use other languages like:
+
+* **C++**: Used for native code development, such as games or performance-critical components.
+* **C#**: Used for developing Android apps using the Xamarin framework.
+* **JavaScript**: Used for developing hybrid apps that combine web and native technologies.
+
+However, Java and Kotlin remain the most widely used languages for Android app development.",True,105.27
+What is the capital of India?,New Delhi,The capital of India is New Delhi.,True,3.06
+Who founded Microsoft?,Bill Gates,"Microsoft was founded by two individuals:
+
+1. **Bill Gates** (born William Henry Gates III) - an American business magnate, software developer, and philanthropist.
+2. **Paul Allen** (1953-2018) - an American business magnate, investor, software engineer, and scientist.
+
+The company was originally named ""Micro-Soft,"" a combination of the words ""microcomputer"" and ""software."" The hyphen was later dropped, and the name became Microsoft Corporation in 1976.",True,37.59
+What is HTML used for?,Web pages,"HTML (HyperText Markup Language) is a standard markup language used to create web pages. It's the backbone of a website, providing the structure and content that makes up a webpage. Here are some key uses of HTML:
+
+1. **Structuring content**: HTML is used to define the structure and organization of a webpage, including headings, paragraphs, images, links, forms, tables, and more.
+2. **Creating web pages**: HTML is used to create the basic layout and design of a website, including the arrangement of text, images, and other elements on a page.
+3. **Defining semantic meaning**: HTML provides a way to define the meaning of different elements on a webpage, such as headings (h1-h6), paragraphs (p), links (a), and images (img).
+4. **Creating interactive elements**: HTML can be used to create interactive elements, such as forms, buttons, and menus.
+5. **Enabling accessibility**: HTML provides features that enable websites to be accessible to people with disabilities, such as screen readers and keyboard navigation.
+
+Some common uses of HTML include:
+
+* Creating web pages for personal or professional use
+* Building websites using content management systems (CMS) like WordPress or Joomla
+* Developing web applications using frameworks like React or Angular
+* Creating mobile apps using frameworks like Ionic or PhoneGap
+
+Overall, HTML is a fundamental language that provides the foundation for building and structuring web content.
+
+Here's an example of basic HTML code:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Web Page</title>
+</head>
+<body>
+  <h1>Welcome to my website!</h1>
+  <p>This is a paragraph of text.</p>
+  <img src=""image.jpg"" alt=""An image on my website"">
+</body>
+</html>
+```
+This code creates a basic web page with a heading, paragraph, and image.",True,103.26
+What is the speed of light?,299792458,"The speed of light in a vacuum is approximately 299,792,458 meters per second (m/s). This is a fundamental constant of nature and is denoted by the letter c. It's worth noting that the speed of light can vary slightly depending on the medium it travels through, but in a vacuum, it remains constant at this value.",False,15.92
+Which gas do plants absorb?,Carbon dioxide,"Plants primarily absorb carbon dioxide (CO2) from the air through tiny openings on their leaves called stomata. This process is known as photosynthesis, where plants use energy from sunlight to convert CO2 and water into glucose and oxygen.
+
+However, it's worth noting that plants also absorb other gases, including:
+
+* Oxygen (O2): Plants release oxygen as a byproduct of photosynthesis.
+* Nitrogen (N2): While plants don't directly absorb nitrogen gas, they can take up nitrogen compounds from the soil through their roots.
+* Sulfur dioxide (SO2): Some plants, like those in tropical regions, can absorb sulfur dioxide from the air.
+
+But carbon dioxide is by far the most important gas for plant growth and photosynthesis.",True,30.71
+Who painted the Mona Lisa?,Leonardo da Vinci,"The Mona Lisa was painted by the Italian artist Leonardo da Vinci (1452-1519). He is widely considered one of the greatest painters of all time, and the Mona Lisa is arguably his most famous work. The painting is believed to have been created between 1503 and 1506, during the Italian Renaissance period.
+
+Interestingly, the identity of the subject in the painting has been a topic of debate among art historians and enthusiasts for centuries. While it was initially thought to be a portrait of Lisa Gherardini, the wife of a wealthy merchant named Francesco del Giocondo, many experts now believe that the subject may actually be a representation of da Vinci's mother or another female model.
+
+Regardless of who the subject is, the Mona Lisa remains one of the most iconic and enigmatic paintings in history, captivating art lovers around the world with its subtle smile and masterful use of sfumato (a painting technique that creates a soft, hazy effect by layering thin glazes of paint).",True,49.6
+Which programming language is known for data science?,Python,"Several programming languages are commonly used in data science, but some of the most popular ones include:
+
+1. **Python**: Python is often considered the de facto language for data science due to its extensive libraries and frameworks, such as:
+	* NumPy: efficient numerical computation
+	* Pandas: data manipulation and analysis
+	* Scikit-learn: machine learning algorithms
+	* Matplotlib and Seaborn: data visualization
+2. **R**: R is a popular language for statistical computing and data visualization, particularly in academia and research.
+3. **Julia**: Julia is a new language that's gaining popularity in the data science community due to its high performance, dynamism, and ease of use.
+4. **SQL**: SQL (Structured Query Language) is used for managing and analyzing relational databases, which are essential for many data science applications.
+
+Other languages, such as Java, C++, and MATLAB, can also be used in data science, but Python and R are generally the most widely adopted.
+
+**Why Python?**
+
+Python's popularity in data science stems from its:
+
+* Easy-to-learn syntax
+* Extensive libraries and frameworks (e.g., scikit-learn, TensorFlow)
+* Large community of developers and users
+* Cross-platform compatibility
+
+Overall, while multiple languages can be used for data science, Python is often the go-to choice due to its versatility, ease of use, and extensive ecosystem.",True,57.44

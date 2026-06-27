@@ -1,0 +1,233 @@
+
+    <html>
+
+    <head>
+
+        <title>LLM Evaluation Report</title>
+
+        <style>
+
+            body {
+                font-family: Arial;
+                margin:40px;
+                background:#f8f9fa;
+            }
+
+            h1 {
+                color:#2c3e50;
+            }
+
+            table {
+                border-collapse:collapse;
+                width:100%;
+                margin-top:20px;
+            }
+
+            th,td {
+                border:1px solid #ddd;
+                padding:10px;
+                text-align:left;
+            }
+
+            th {
+                background:#4CAF50;
+                color:white;
+            }
+
+            tr:nth-child(even){
+                background:#f2f2f2;
+            }
+
+            .card{
+                background:white;
+                padding:20px;
+                border-radius:10px;
+                margin-bottom:20px;
+                box-shadow:0px 0px 8px rgba(0,0,0,0.15);
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+    <h1>📊 LLM Evaluation Report</h1>
+
+    <div class="card">
+
+    <h2>Summary</h2>
+
+    <p><b>Accuracy:</b> 90.00%</p>
+
+    <p><b>Status:</b> FAIL ❌</p>
+
+    <p><b>Hallucination Rate:</b> 10.00%</p>
+
+    <p><b>Average Latency:</b> 34.90 sec</p>
+
+    <p><b>Fastest Response:</b> 0.51 sec</p>
+
+    <p><b>Slowest Response:</b> 105.27 sec</p>
+
+    </div>
+
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Question</th>
+      <th>Expected</th>
+      <th>Actual</th>
+      <th>Correct</th>
+      <th>Latency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>What is the capital of France?</td>
+      <td>Paris</td>
+      <td>The capital of France is Paris.</td>
+      <td>True</td>
+      <td>13.41</td>
+    </tr>
+    <tr>
+      <td>What is the capital of Japan?</td>
+      <td>Tokyo</td>
+      <td>The capital of Japan is Tokyo.</td>
+      <td>True</td>
+      <td>24.44</td>
+    </tr>
+    <tr>
+      <td>Who invented Python?</td>
+      <td>Guido van Rossum</td>
+      <td>Python was created by Guido van Rossum, a Dutch computer programmer. He began working on the language in the late 1980s and released the first version of Python in 1991. At the time, he was working at the National Research Institute for Mathematics and Computer Science in the Netherlands.\n\nGuido van Rossum chose the name "Python" because he was a fan of the British comedy group Monty Python's Flying Circus. He wanted a short and memorable name that would be easy to type on keyboards.\n\nOver the years, Guido continued to work on Python, releasing new versions and adding features to the language. In 2000, he stepped down as the "Benevolent Dictator for Life" (BDFL) of the Python project, but remained involved in its development until his retirement in 2018.\n\nToday, Python is one of the most popular programming languages in the world, widely used in various fields such as web development, data science, machine learning, and more.</td>
+      <td>True</td>
+      <td>56.92</td>
+    </tr>
+    <tr>
+      <td>Who developed the theory of relativity?</td>
+      <td>Albert Einstein</td>
+      <td>The theory of relativity was developed by Albert Einstein, a renowned German-born physicist. There are actually two main components to Einstein's theory of relativity:\n\n1. **Special Relativity (1905)**: This theory posits that the laws of physics are the same for all observers in uniform motion relative to one another. It introduced the famous equation E=mc² and challenged long-held notions about space, time, and gravity.\n2. **General Relativity (1915)**: This theory builds upon special relativity and introduces the concept of gravity as a curvature of spacetime caused by massive objects. According to general relativity, the presence of mass and energy warps the fabric of spacetime, affecting the motion of objects.\n\nEinstein's work on the theory of relativity revolutionized our understanding of space, time, and gravity, and has had a profound impact on modern physics, astronomy, and engineering.\n\n(Note: There is also a third component to Einstein's work, known as **Quantum Mechanics**, which he contributed to in his later years. However, that's a topic for another time!)</td>
+      <td>True</td>
+      <td>51.43</td>
+    </tr>
+    <tr>
+      <td>2+2</td>
+      <td>4</td>
+      <td>2 + 2 = 4</td>
+      <td>True</td>
+      <td>2.14</td>
+    </tr>
+    <tr>
+      <td>10*10</td>
+      <td>100</td>
+      <td>100</td>
+      <td>True</td>
+      <td>0.51</td>
+    </tr>
+    <tr>
+      <td>Square root of 64</td>
+      <td>8</td>
+      <td>The square root of 64 is 8.</td>
+      <td>True</td>
+      <td>2.99</td>
+    </tr>
+    <tr>
+      <td>Which planet is known as the Red Planet?</td>
+      <td>Mars</td>
+      <td>The planet known as the "Red Planet" is Mars. This nickname comes from its reddish appearance, which is due to iron oxide (or rust) in the planet's soil and rocks.</td>
+      <td>True</td>
+      <td>10.35</td>
+    </tr>
+    <tr>
+      <td>What is the largest ocean?</td>
+      <td>Pacific Ocean</td>
+      <td>The largest of the five oceans is the Pacific Ocean, which covers approximately 155.6 million square kilometers (60.1 million square miles). It accounts for about 46% of the Earth's total ocean area and is also the deepest ocean, with a maximum depth of about 11,022 meters (36,198 feet) in the Mariana Trench.</td>
+      <td>True</td>
+      <td>14.67</td>
+    </tr>
+    <tr>
+      <td>What is the chemical symbol for water?</td>
+      <td>H2O</td>
+      <td>The chemical symbol for water is H₂O.\n\nHere's how it works:\n\n* "H" represents hydrogen, which is one of the two elements that make up water.\n* The subscript 2 indicates that there are two hydrogen atoms in a molecule of water.\n* The "O" represents oxygen, which is the other element that makes up water.\n\nSo, H₂O is the chemical formula for water!</td>
+      <td>False</td>
+      <td>16.86</td>
+    </tr>
+    <tr>
+      <td>Who wrote Romeo and Juliet?</td>
+      <td>William Shakespeare</td>
+      <td>Romeo and Juliet, the tragic love story of two young lovers from feuding families in Verona, Italy, was written by William Shakespeare. The exact date of its composition is not known, but it is believed to have been written between 1591 and 1595.\n\nShakespeare's play is based on an earlier narrative poem called "The Tragicall Historye of Romeus and Juliet" by Arthur Brooke, which was published in 1562. Shakespeare's version is considered one of the greatest works of literature ever written, and its themes of love, passion, fate, and conflict continue to captivate audiences around the world.\n\nInterestingly, there are some debates among scholars about whether Shakespeare actually wrote Romeo and Juliet himself or if he adapted an earlier work by another author. However, the overwhelming majority of experts agree that Shakespeare was indeed the author of this iconic play.</td>
+      <td>True</td>
+      <td>32.39</td>
+    </tr>
+    <tr>
+      <td>What is the tallest mountain?</td>
+      <td>Mount Everest</td>
+      <td>The tallest mountain in the world is Mount Everest, which is located in the Himalayas on the border between Nepal and Tibet, China. It stands at an elevation of 8,848 meters (29,029 feet) above sea level.\n\nHowever, it's worth noting that there are different ways to measure the height of a mountain, and some sources may list other mountains as being taller due to various factors such as the method of measurement or the definition of a "mountain".\n\nFor example, Mauna Kea, a dormant volcano on the Big Island of Hawaii, is often considered the tallest mountain in the world when measured from its base on the ocean floor. It stands at an elevation of 4,207 meters (13,796 feet) above sea level, but its total height, including its underwater portion, is over 9,700 meters (31,800 feet).\n\nOther contenders for the title of tallest mountain include:\n\n* Mount Chimborazo in Ecuador, which is slightly shorter than Mount Everest but appears taller due to the Earth's curvature.\n* Mount Kilimanjaro in Tanzania, which is the highest peak in Africa and stands at an elevation of 5,895 meters (19,341 feet) above sea level.\n\nUltimately, the "tallest" mountain is a matter of perspective and depends on how one defines a "mountain".</td>
+      <td>True</td>
+      <td>69.07</td>
+    </tr>
+    <tr>
+      <td>What language is primarily used for Android development?</td>
+      <td>Kotlin</td>
+      <td>The primary languages used for Android development are:\n\n1. **Java**: This is the most widely used language for Android app development. Java is used to write the majority of the code in an Android app, including the user interface (UI) components, business logic, and data storage.\n2. **Kotlin**: Kotlin is a modern programming language that was designed specifically for Android app development. It's fully interoperable with Java and is gaining popularity as it provides more concise and expressive syntax.\n\nBoth Java and Kotlin are used to develop Android apps, but Kotlin has become increasingly popular in recent years due to its simplicity, safety features, and compatibility with Java.\n\nAdditionally, some developers may also use other languages like:\n\n* **C++**: Used for native code development, such as games or performance-critical components.\n* **C#**: Used for developing Android apps using the Xamarin framework.\n* **JavaScript**: Used for developing hybrid apps that combine web and native technologies.\n\nHowever, Java and Kotlin remain the most widely used languages for Android app development.</td>
+      <td>True</td>
+      <td>105.27</td>
+    </tr>
+    <tr>
+      <td>What is the capital of India?</td>
+      <td>New Delhi</td>
+      <td>The capital of India is New Delhi.</td>
+      <td>True</td>
+      <td>3.06</td>
+    </tr>
+    <tr>
+      <td>Who founded Microsoft?</td>
+      <td>Bill Gates</td>
+      <td>Microsoft was founded by two individuals:\n\n1. **Bill Gates** (born William Henry Gates III) - an American business magnate, software developer, and philanthropist.\n2. **Paul Allen** (1953-2018) - an American business magnate, investor, software engineer, and scientist.\n\nThe company was originally named "Micro-Soft," a combination of the words "microcomputer" and "software." The hyphen was later dropped, and the name became Microsoft Corporation in 1976.</td>
+      <td>True</td>
+      <td>37.59</td>
+    </tr>
+    <tr>
+      <td>What is HTML used for?</td>
+      <td>Web pages</td>
+      <td>HTML (HyperText Markup Language) is a standard markup language used to create web pages. It's the backbone of a website, providing the structure and content that makes up a webpage. Here are some key uses of HTML:\n\n1. **Structuring content**: HTML is used to define the structure and organization of a webpage, including headings, paragraphs, images, links, forms, tables, and more.\n2. **Creating web pages**: HTML is used to create the basic layout and design of a website, including the arrangement of text, images, and other elements on a page.\n3. **Defining semantic meaning**: HTML provides a way to define the meaning of different elements on a webpage, such as headings (h1-h6), paragraphs (p), links (a), and images (img).\n4. **Creating interactive elements**: HTML can be used to create interactive elements, such as forms, buttons, and menus.\n5. **Enabling accessibility**: HTML provides features that enable websites to be accessible to people with disabilities, such as screen readers and keyboard navigation.\n\nSome common uses of HTML include:\n\n* Creating web pages for personal or professional use\n* Building websites using content management systems (CMS) like WordPress or Joomla\n* Developing web applications using frameworks like React or Angular\n* Creating mobile apps using frameworks like Ionic or PhoneGap\n\nOverall, HTML is a fundamental language that provides the foundation for building and structuring web content.\n\nHere's an example of basic HTML code:\n```html\n&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n&nbsp;&nbsp;&lt;title&gt;My Web Page&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n&nbsp;&nbsp;&lt;h1&gt;Welcome to my website!&lt;/h1&gt;\n&nbsp;&nbsp;&lt;p&gt;This is a paragraph of text.&lt;/p&gt;\n&nbsp;&nbsp;&lt;img src="image.jpg" alt="An image on my website"&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n```\nThis code creates a basic web page with a heading, paragraph, and image.</td>
+      <td>True</td>
+      <td>103.26</td>
+    </tr>
+    <tr>
+      <td>What is the speed of light?</td>
+      <td>299792458</td>
+      <td>The speed of light in a vacuum is approximately 299,792,458 meters per second (m/s). This is a fundamental constant of nature and is denoted by the letter c. It's worth noting that the speed of light can vary slightly depending on the medium it travels through, but in a vacuum, it remains constant at this value.</td>
+      <td>False</td>
+      <td>15.92</td>
+    </tr>
+    <tr>
+      <td>Which gas do plants absorb?</td>
+      <td>Carbon dioxide</td>
+      <td>Plants primarily absorb carbon dioxide (CO2) from the air through tiny openings on their leaves called stomata. This process is known as photosynthesis, where plants use energy from sunlight to convert CO2 and water into glucose and oxygen.\n\nHowever, it's worth noting that plants also absorb other gases, including:\n\n* Oxygen (O2): Plants release oxygen as a byproduct of photosynthesis.\n* Nitrogen (N2): While plants don't directly absorb nitrogen gas, they can take up nitrogen compounds from the soil through their roots.\n* Sulfur dioxide (SO2): Some plants, like those in tropical regions, can absorb sulfur dioxide from the air.\n\nBut carbon dioxide is by far the most important gas for plant growth and photosynthesis.</td>
+      <td>True</td>
+      <td>30.71</td>
+    </tr>
+    <tr>
+      <td>Who painted the Mona Lisa?</td>
+      <td>Leonardo da Vinci</td>
+      <td>The Mona Lisa was painted by the Italian artist Leonardo da Vinci (1452-1519). He is widely considered one of the greatest painters of all time, and the Mona Lisa is arguably his most famous work. The painting is believed to have been created between 1503 and 1506, during the Italian Renaissance period.\n\nInterestingly, the identity of the subject in the painting has been a topic of debate among art historians and enthusiasts for centuries. While it was initially thought to be a portrait of Lisa Gherardini, the wife of a wealthy merchant named Francesco del Giocondo, many experts now believe that the subject may actually be a representation of da Vinci's mother or another female model.\n\nRegardless of who the subject is, the Mona Lisa remains one of the most iconic and enigmatic paintings in history, captivating art lovers around the world with its subtle smile and masterful use of sfumato (a painting technique that creates a soft, hazy effect by layering thin glazes of paint).</td>
+      <td>True</td>
+      <td>49.60</td>
+    </tr>
+    <tr>
+      <td>Which programming language is known for data science?</td>
+      <td>Python</td>
+      <td>Several programming languages are commonly used in data science, but some of the most popular ones include:\n\n1. **Python**: Python is often considered the de facto language for data science due to its extensive libraries and frameworks, such as:\n\t* NumPy: efficient numerical computation\n\t* Pandas: data manipulation and analysis\n\t* Scikit-learn: machine learning algorithms\n\t* Matplotlib and Seaborn: data visualization\n2. **R**: R is a popular language for statistical computing and data visualization, particularly in academia and research.\n3. **Julia**: Julia is a new language that's gaining popularity in the data science community due to its high performance, dynamism, and ease of use.\n4. **SQL**: SQL (Structured Query Language) is used for managing and analyzing relational databases, which are essential for many data science applications.\n\nOther languages, such as Java, C++, and MATLAB, can also be used in data science, but Python and R are generally the most widely adopted.\n\n**Why Python?**\n\nPython's popularity in data science stems from its:\n\n* Easy-to-learn syntax\n* Extensive libraries and frameworks (e.g., scikit-learn, TensorFlow)\n* Large community of developers and users\n* Cross-platform compatibility\n\nOverall, while multiple languages can be used for data science, Python is often the go-to choice due to its versatility, ease of use, and extensive ecosystem.</td>
+      <td>True</td>
+      <td>57.44</td>
+    </tr>
+  </tbody>
+</table>
+
+    </body>
+
+    </html>
+
+    
