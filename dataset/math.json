@@ -1,0 +1,48 @@
+[
+  {"id":1,"category":"Math","difficulty":"Easy","question":"2 + 3","expected":"5"},
+  {"id":2,"category":"Math","difficulty":"Easy","question":"10 - 4","expected":"6"},
+  {"id":3,"category":"Math","difficulty":"Easy","question":"7 × 8","expected":"56"},
+  {"id":4,"category":"Math","difficulty":"Easy","question":"81 ÷ 9","expected":"9"},
+  {"id":5,"category":"Math","difficulty":"Easy","question":"Square root of 49","expected":"7"},
+  {"id":6,"category":"Math","difficulty":"Easy","question":"15 + 25","expected":"40"},
+  {"id":7,"category":"Math","difficulty":"Easy","question":"100 - 45","expected":"55"},
+  {"id":8,"category":"Math","difficulty":"Easy","question":"12 × 12","expected":"144"},
+  {"id":9,"category":"Math","difficulty":"Easy","question":"144 ÷ 12","expected":"12"},
+  {"id":10,"category":"Math","difficulty":"Easy","question":"50% of 200","expected":"100"},
+
+  {"id":11,"category":"Math","difficulty":"Medium","question":"25% of 80","expected":"20"},
+  {"id":12,"category":"Math","difficulty":"Medium","question":"What is 18 squared?","expected":"324"},
+  {"id":13,"category":"Math","difficulty":"Medium","question":"Cube of 5","expected":"125"},
+  {"id":14,"category":"Math","difficulty":"Medium","question":"What is 2⁸?","expected":"256"},
+  {"id":15,"category":"Math","difficulty":"Medium","question":"What is 15% of 400?","expected":"60"},
+  {"id":16,"category":"Math","difficulty":"Medium","question":"Solve: 5x = 45","expected":"9"},
+  {"id":17,"category":"Math","difficulty":"Medium","question":"Solve: x + 12 = 35","expected":"23"},
+  {"id":18,"category":"Math","difficulty":"Medium","question":"Perimeter of a square with side 8","expected":"32"},
+  {"id":19,"category":"Math","difficulty":"Medium","question":"Area of a rectangle with length 10 and width 5","expected":"50"},
+  {"id":20,"category":"Math","difficulty":"Medium","question":"Average of 10, 20, 30","expected":"20"},
+
+  {"id":21,"category":"Math","difficulty":"Medium","question":"What is 7 factorial (7!)?","expected":"5040"},
+  {"id":22,"category":"Math","difficulty":"Medium","question":"LCM of 6 and 8","expected":"24"},
+  {"id":23,"category":"Math","difficulty":"Medium","question":"GCD of 36 and 48","expected":"12"},
+  {"id":24,"category":"Math","difficulty":"Medium","question":"Convert 0.75 to a fraction","expected":"3/4"},
+  {"id":25,"category":"Math","difficulty":"Medium","question":"What is 3/5 of 100?","expected":"60"},
+
+  {"id":26,"category":"Math","difficulty":"Hard","question":"Solve: 2x + 5 = 17","expected":"6"},
+  {"id":27,"category":"Math","difficulty":"Hard","question":"Solve: x² = 169","expected":"13"},
+  {"id":28,"category":"Math","difficulty":"Hard","question":"Area of a circle with radius 7 (use π=22/7)","expected":"154"},
+  {"id":29,"category":"Math","difficulty":"Hard","question":"Circumference of a circle with radius 7 (use π=22/7)","expected":"44"},
+  {"id":30,"category":"Math","difficulty":"Hard","question":"What is 13²?","expected":"169"},
+
+  {"id":31,"category":"Math","difficulty":"Hard","question":"What is 17 × 19?","expected":"323"},
+  {"id":32,"category":"Math","difficulty":"Hard","question":"What is 999 + 1?","expected":"1000"},
+  {"id":33,"category":"Math","difficulty":"Hard","question":"What is 144% of 50?","expected":"72"},
+  {"id":34,"category":"Math","difficulty":"Hard","question":"If x=4, compute 3x² + 2","expected":"50"},
+  {"id":35,"category":"Math","difficulty":"Hard","question":"What is √225?","expected":"15"},
+
+  {"id":36,"category":"Math","difficulty":"Hard","question":"How many degrees are in a triangle?","expected":"180"},
+  {"id":37,"category":"Math","difficulty":"Hard","question":"How many sides does a hexagon have?","expected":"6"},
+  {"id":38,"category":"Math","difficulty":"Hard","question":"What is 11³?","expected":"1331"},
+  {"id":39,"category":"Math","difficulty":"Hard","question":"What is 14 × 15?","expected":"210"},
+  {"id":40,"category":"Math","difficulty":"Hard","question":"Solve: 9x = 81","expected":"9"}
+
+]

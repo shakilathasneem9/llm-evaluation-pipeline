@@ -8,99 +8,147 @@ import pandas as pd
 from llm import ask_llm
 from report import generate_html_report
 
+# ======================================================
+# DATASETS
+# ======================================================
 
-# -----------------------------
-# Load Dataset
-# -----------------------------
-with open("dataset/golden_dataset.json", "r", encoding="utf-8") as f:
-    dataset = json.load(f)
+DATASETS = [
+    "dataset/general.json",
+    "dataset/math.json",
+    "dataset/coding.json",
+    "dataset/reasoning.json",
+    "dataset/redteam.json",
+]
 
 results = []
-correct = 0
 
-# -----------------------------
-# Evaluate Questions
-# -----------------------------
-for item in dataset:
+# ======================================================
+# EVALUATE ALL DATASETS
+# ======================================================
 
-    question = item["question"]
-    expected = item["expected"]
+for dataset_path in DATASETS:
 
-    start = time.time()
+    dataset_name = os.path.basename(dataset_path).replace(".json", "").upper()
 
-    actual = ask_llm(question)
+    print("\n" + "=" * 70)
+    print(f"STARTING DATASET : {dataset_name}")
+    print("=" * 70)
 
-    latency = round(time.time() - start, 2)
+    # -------------------------
+    # Load Dataset
+    # -------------------------
+    try:
+        with open(dataset_path, "r", encoding="utf-8-sig") as f:
+            dataset = json.load(f)
 
-    is_correct = expected.lower() in actual.lower()
+    except FileNotFoundError:
+        print(f"❌ File not found: {dataset_path}")
+        continue
 
-    if is_correct:
-        correct += 1
+    except json.JSONDecodeError as e:
+        print(f"❌ Invalid JSON in {dataset_path}")
+        print(e)
+        continue
 
-    results.append(
-        {
-            "Question": question,
-            "Expected": expected,
-            "Actual": actual,
-            "Correct": is_correct,
-            "Latency": latency,
-        }
-    )
+    # -------------------------
+    # Evaluate Questions
+    # -------------------------
+    for i, item in enumerate(dataset, start=1):
 
-# -----------------------------
-# Convert to DataFrame
-# -----------------------------
+        # Support both dataset formats
+        if "question" in item:
+            question = item["question"]
+            expected = item["expected"]
+        else:
+            question = item["prompt"]
+            expected = item["expected_behavior"]
+
+        print(f"[{dataset_name}] {i}/{len(dataset)}")
+
+        start = time.time()
+
+        try:
+            actual = ask_llm(question)
+        except Exception as e:
+            print("❌", e)
+            actual = ""
+
+        latency = round(time.time() - start, 2)
+
+        is_correct = expected.lower() in actual.lower()
+
+        print(
+            f"Question : {question}\n"
+            f"Latency  : {latency:.2f} sec\n"
+            f"Result   : {'✅ Correct' if is_correct else '❌ Incorrect'}"
+        )
+
+        print("-" * 70)
+
+        results.append(
+            {
+                "Dataset": dataset_name,
+                "Question": question,
+                "Expected": expected,
+                "Actual": actual,
+                "Correct": is_correct,
+                "Latency": latency,
+            }
+        )
+
+# ======================================================
+# DATAFRAME
+# ======================================================
+
+if len(results) == 0:
+    print("❌ No evaluation results generated.")
+    exit()
+
 df = pd.DataFrame(results)
 
-# -----------------------------
-# Metrics
-# -----------------------------
+# ======================================================
+# METRICS
+# ======================================================
+
 accuracy = df["Correct"].mean() * 100
 
 avg_latency = df["Latency"].mean()
-max_latency = df["Latency"].max()
 min_latency = df["Latency"].min()
+max_latency = df["Latency"].max()
 
 total_questions = len(df)
 
 correct_answers = int(df["Correct"].sum())
 incorrect_answers = total_questions - correct_answers
 
-# -----------------------------
-# Hallucination Rate
-# -----------------------------
-hallucinations = 0
+hallucinations = (
+    df.apply(
+        lambda x: x["Expected"].lower() not in x["Actual"].lower(),
+        axis=1,
+    )
+).sum()
 
-for _, row in df.iterrows():
+hallucination_rate = hallucinations / total_questions * 100
 
-    if row["Expected"].lower() not in row["Actual"].lower():
-        hallucinations += 1
-
-hallucination_rate = (hallucinations / total_questions) * 100
-
-# -----------------------------
-# Pass / Fail
-# -----------------------------
 pass_fail = "PASS ✅" if accuracy >= 95 else "FAIL ❌"
 
-# -----------------------------
-# Save Reports
-# -----------------------------
+# ======================================================
+# SAVE REPORTS
+# ======================================================
+
 os.makedirs("reports", exist_ok=True)
 
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-history_filename = f"reports/results_{timestamp}.csv"
+history_file = f"reports/results_{timestamp}.csv"
 
-# Save timestamped history
-df.to_csv(history_filename, index=False)
-
-# Save latest results
+df.to_csv(history_file, index=False)
 df.to_csv("reports/results.csv", index=False)
 
-# -----------------------------
-# Generate HTML Report
-# -----------------------------
+# ======================================================
+# HTML REPORT
+# ======================================================
+
 generate_html_report(
     df=df,
     accuracy=accuracy,
@@ -111,34 +159,38 @@ generate_html_report(
     pass_fail=pass_fail,
 )
 
-# -----------------------------
-# Print Summary
-# -----------------------------
-print("\n" + "=" * 55)
-print("           LLM Evaluation Summary")
-print("=" * 55)
+# ======================================================
+# SUMMARY
+# ======================================================
 
-print(f"Total Questions      : {total_questions}")
-print(f"Correct Answers      : {correct_answers}")
-print(f"Incorrect Answers    : {incorrect_answers}")
+print("\n")
+print("=" * 70)
+print("LLM EVALUATION SUMMARY")
+print("=" * 70)
 
-print("-" * 55)
+print(f"Datasets Evaluated : {len(DATASETS)}")
+print(f"Total Questions    : {total_questions}")
+print(f"Correct Answers    : {correct_answers}")
+print(f"Incorrect Answers  : {incorrect_answers}")
 
-print(f"Accuracy             : {accuracy:.2f}%")
-print(f"Hallucination Rate   : {hallucination_rate:.2f}%")
+print("-" * 70)
 
-print("-" * 55)
+print(f"Accuracy           : {accuracy:.2f}%")
+print(f"Hallucination Rate : {hallucination_rate:.2f}%")
 
-print(f"Average Latency      : {avg_latency:.2f} sec")
-print(f"Fastest Response     : {min_latency:.2f} sec")
-print(f"Slowest Response     : {max_latency:.2f} sec")
+print("-" * 70)
 
-print("-" * 55)
+print(f"Average Latency    : {avg_latency:.2f} sec")
+print(f"Fastest Response   : {min_latency:.2f} sec")
+print(f"Slowest Response   : {max_latency:.2f} sec")
 
-print(f"Overall Status       : {pass_fail}")
+print("-" * 70)
 
-print("=" * 55)
+print(f"Overall Status     : {pass_fail}")
 
-print(f"\n✅ Latest CSV Report   : reports/results.csv")
-print(f"✅ History CSV Report  : {history_filename}")
-print("✅ HTML Report         : reports/report.html")
+print("=" * 70)
+
+print("\nReports Generated Successfully")
+print(f"Latest CSV : reports/results.csv")
+print(f"History    : {history_file}")
+print("HTML       : reports/report.html")

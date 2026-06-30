@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "category": "General",
+    "difficulty": "Easy",
+    "question": "What is the capital of France?",
+    "expected": "Paris"
+  },
+  {
+    "id": 2,
+    "category": "General",
+    "difficulty": "Easy",
+    "question": "What is the capital of Japan?",
+    "expected": "Tokyo"
+  },
+  {
+    "id": 3,
+    "category": "General",
+    "difficulty": "Easy",
+    "question": "What is the capital of India?",
+    "expected": "New Delhi"
+  },
+  {
+    "id": 4,
+    "category": "General",
+    "difficulty": "Easy",
+    "question": "Which planet is known as the Red Planet?",
+    "expected": "Mars"
+  },
+  {
+    "id": 5,
+    "category": "General",
+    "difficulty": "Easy",
+    "question": "What is the largest ocean on Earth?",
+    "expected": "Pacific Ocean"
+  },
+  {
+    "id": 6,
+    "category": "General",
+    "difficulty": "Easy",
+    "question": "Who wrote Romeo and Juliet?",
+    "expected": "William Shakespeare"
+  },
+  {
+    "id": 7,
+    "category": "General",
+    "difficulty": "Easy",
+    "question": "Who painted the Mona Lisa?",
+    "expected": "Leonardo da Vinci"
+  },
+  {
+    "id": 8,
+    "category": "General",
+    "difficulty": "Easy",
+    "question": "Which gas do plants absorb from the atmosphere?",
+    "expected": "Carbon dioxide"
+  },
+  {
+    "id": 9,
+    "category": "General",
+    "difficulty": "Easy",
+    "question": "What is the chemical symbol for water?",
+    "expected": "H2O"
+  },
+  {
+    "id": 10,
+    "category": "General",
+    "difficulty": "Easy",
+    "question": "What is the tallest mountain in the world?",
+    "expected": "Mount Everest"
+  },
+  {
+    "id": 11,
+    "category": "General",
+    "difficulty": "Medium",
+    "question": "Who developed the theory of relativity?",
+    "expected": "Albert Einstein"
+  },
+  {
+    "id": 12,
+    "category": "General",
+    "difficulty": "Medium",
+    "question": "Who discovered penicillin?",
+    "expected": "Alexander Fleming"
+  },
+  {
+    "id": 13,
+    "category": "General",
+    "difficulty": "Medium",
+    "question": "Which is the longest river in the world?",
+    "expected": "Nile River"
+  },
+  {
+    "id": 14,
+    "category": "General",
+    "difficulty": "Medium",
+    "question": "Who was the first person to walk on the Moon?",
+    "expected": "Neil Armstrong"
+  },
+  {
+    "id": 15,
+    "category": "General",
+    "difficulty": "Medium",
+    "question": "Which country is known as the Land of the Rising Sun?",
+    "expected": "Japan"
+  },
+  {
+    "id": 16,
+    "category": "General",
+    "difficulty": "Medium",
+    "question": "What is the hardest natural substance?",
+    "expected": "Diamond"
+  },
+  {
+    "id": 17,
+    "category": "General",
+    "difficulty": "Medium",
+    "question": "What is the SI unit of force?",
+    "expected": "Newton"
+  },
+  {
+    "id": 18,
+    "category": "General",
+    "difficulty": "Medium",
+    "question": "Who invented the telephone?",
+    "expected": "Alexander Graham Bell"
+  },
+  {
+    "id": 19,
+    "category": "General",
+    "difficulty": "Medium",
+    "question": "What is the currency of Japan?",
+    "expected": "Yen"
+  },
+  {
+    "id": 20,
+    "category": "General",
+    "difficulty": "Medium",
+    "question": "Which continent is the Sahara Desert located on?",
+    "expected": "Africa"
+  },
+  {
+    "id": 21,
+    "category": "General",
+    "difficulty": "Medium",
+    "question": "Who is known as the Father of Computers?",
+    "expected": "Charles Babbage"
+  },
+  {
+    "id": 22,
+    "category": "General",
+    "difficulty": "Medium",
+    "question": "What is the smallest prime number?",
+    "expected": "2"
+  },
+  {
+    "id": 23,
+    "category": "General",
+    "difficulty": "Medium",
+    "question": "Which blood group is known as the universal donor?",
+    "expected": "O negative"
+  },
+  {
+    "id": 24,
+    "category": "General",
+    "difficulty": "Medium",
+    "question": "Which organ pumps blood throughout the human body?",
+    "expected": "Heart"
+  },
+  {
+    "id": 25,
+    "category": "General",
+    "difficulty": "Medium",
+    "question": "What is the largest mammal?",
+    "expected": "Blue whale"
+  },
+  {
+    "id": 26,
+    "category": "General",
+    "difficulty": "Hard",
+    "question": "Which scientist proposed the three laws of motion?",
+    "expected": "Isaac Newton"
+  },
+  {
+    "id": 27,
+    "category": "General",
+    "difficulty": "Hard",
+    "question": "Which country has the most time zones?",
+    "expected": "France"
+  },
+  {
+    "id": 28,
+    "category": "General",
+    "difficulty": "Hard",
+    "question": "What is the capital of Australia?",
+    "expected": "Canberra"
+  },
+  {
+    "id": 29,
+    "category": "General",
+    "difficulty": "Hard",
+    "question": "Who wrote 'The Origin of Species'?",
+    "expected": "Charles Darwin"
+  },
+  {
+    "id": 30,
+    "category": "General",
+    "difficulty": "Hard",
+    "question": "What is the boiling point of water at sea level in Celsius?",
+    "expected": "100"
+  },
+  {
+    "id": 31,
+    "category": "General",
+    "difficulty": "Hard",
+    "question": "Which planet has the most moons?",
+    "expected": "Saturn"
+  },
+  {
+    "id": 32,
+    "category": "General",
+    "difficulty": "Hard",
+    "question": "What is the largest desert in the world?",
+    "expected": "Antarctic Desert"
+  },
+  {
+    "id": 33,
+    "category": "General",
+    "difficulty": "Hard",
+    "question": "Which element has the chemical symbol Au?",
+    "expected": "Gold"
+  },
+  {
+    "id": 34,
+    "category": "General",
+    "difficulty": "Hard",
+    "question": "Who formulated the laws of planetary motion?",
+    "expected": "Johannes Kepler"
+  },
+  {
+    "id": 35,
+    "category": "General",
+    "difficulty": "Hard",
+    "question": "Which ocean lies between Africa and Australia?",
+    "expected": "Indian Ocean"
+  },
+  {
+    "id": 36,
+    "category": "General",
+    "difficulty": "Hard",
+    "question": "What is the capital of Brazil?",
+    "expected": "Brasilia"
+  },
+  {
+    "id": 37,
+    "category": "General",
+    "difficulty": "Hard",
+    "question": "Who invented the World Wide Web?",
+    "expected": "Tim Berners-Lee"
+  },
+  {
+    "id": 38,
+    "category": "General",
+    "difficulty": "Hard",
+    "question": "What is the fastest land animal?",
+    "expected": "Cheetah"
+  },
+  {
+    "id": 39,
+    "category": "General",
+    "difficulty": "Hard",
+    "question": "Which country gifted the Statue of Liberty to the United States?",
+    "expected": "France"
+  },
+  {
+    "id": 40,
+    "category": "General",
+    "difficulty": "Hard",
+    "question": "What is the largest internal organ in the human body?",
+    "expected": "Liver"
+  }
+]
