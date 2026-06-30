@@ -1,272 +1,166 @@
-# 🚀 LLM Evaluation Pipeline
+LLM Evaluation Pipeline
 
-An automated **LLM Evaluation Pipeline** built with **Python**, **LM Studio**, and **Streamlit** to evaluate Large Language Models (LLMs) using a benchmark dataset. This project measures model performance, generates evaluation reports, and visualizes results through an interactive dashboard.
+An automated Large Language Model (LLM) Evaluation Pipeline built with Python, LM Studio, Llama 3.2, and Streamlit to benchmark LLM performance across multiple datasets. The project evaluates model accuracy, latency, hallucination rate, and adversarial robustness while generating interactive dashboards and evaluation reports.
 
----
+ Features
+-Connects to Llama 3.2 through LM Studio using the OpenAI-compatible API
+- Evaluates multiple benchmark datasets:
+General Knowledge
+Mathematics
+Coding
+Logical Reasoning
+Red Team (Safety & Prompt Injection)
+- Automatically computes:
+Accuracy
+Hallucination Rate
+Response Latency
+Dataset-wise Accuracy
+Dataset-wise Latency
+-Generates:
+CSV Reports
+HTML Evaluation Reports
+-Interactive Streamlit Dashboard
+-Export evaluation results
+-Modular and extensible architecture
 
-## 📌 Features
-
-- 🤖 Connects to a local LLM using **LM Studio**
-- 📚 Evaluates models using a custom benchmark dataset
-- 📊 Calculates evaluation metrics:
-  - Accuracy
-  - Latency
-- 📄 Saves evaluation results as a CSV report
-- 📈 Interactive Streamlit dashboard
-- 🛠️ Modular project structure
-- 🔄 Ready for GitHub Actions (CI/CD)
-
----
-
-## 🏗️ Project Structure
-
-```text
+🏗 Project Structure
+```
 llm-evaluation-pipeline/
-│
-├── .github/
-│   └── workflows/
-│       └── evaluate.yml
-│
+
 ├── dashboard/
 │   └── app.py
 │
 ├── dataset/
-│   └── golden_dataset.json
-│
-├── prompts/
-│   └── system_prompt.txt
+│   ├── general.json
+│   ├── math.json
+│   ├── coding.json
+│   ├── reasoning.json
+│   └── redteam.json
 │
 ├── reports/
-│   └── results.csv
+│   ├── results.csv
+│   └── report.html
 │
 ├── src/
-│   ├── llm.py
 │   ├── evaluate.py
-│   └── metrics.py
+│   ├── llm.py
+│   ├── report.py
+│   ├── metrics.py
+│   └── utils.py
 │
-├── tests/
-│
-├── LICENSE
-├── README.md
 ├── requirements.txt
-├── .env
-└── .gitignore
+├── README.md
+├── .gitignore
+└── .env
 ```
+🛠 Technologies Used
 
----
+Python
+LM Studio
+Llama 3.2
+OpenAI Python SDK
+Streamlit
+Pandas
+python-dotenv
 
-## ⚙️ Technologies Used
+📊 Benchmark Datasets
 
-- Python
-- LM Studio
-- Llama 3.2
-- OpenAI Python SDK
-- Streamlit
-- Pandas
-- python-dotenv
+The evaluation pipeline benchmarks the LLM using five datasets.
 
----
+Dataset	Description
 
-## 📋 Prerequisites
+General-General knowledge questions
+Maths-Arithmetic and mathematical reasoning
+Coding-Programming and debugging questions
+Reasoning-Logical reasoning and problem solving
+Red Team-Prompt injection, jailbreak, prompt leakage, harmful content, and bias evaluation
 
-Before running this project, ensure you have:
+📈 Evaluation Metrics
 
-- Python 3.10+
-- LM Studio installed
-- A downloaded and loaded LLM (e.g., Llama 3.2)
-- LM Studio Local Server running
+The system automatically calculates:
 
-Server URL:
+✅ Overall Accuracy
+✅ Dataset-wise Accuracy
+✅ Average Response Latency
+✅ Fastest Response
+✅ Slowest Response
+✅ Hallucination Rate
+✅ Correct vs Incorrect Responses
+📊 Dashboard
 
+The Streamlit dashboard provides:
+
+Overall evaluation summary
+Dataset-wise accuracy
+Dataset-wise latency
+Correct vs Incorrect chart
+Latency analysis
+Complete evaluation table
+CSV download option
+🚀 Installation
+
+Clone the repository
 ```
-http://127.0.0.1:1234
-```
-
----
-
-## 🔧 Installation
-
-### Clone the repository
-
-```bash
 git clone https://github.com/shakilathasneem9/llm-evaluation-pipeline.git
 cd llm-evaluation-pipeline
 ```
-
-### Create a virtual environment
-
-```bash
+Create a virtual environment
+```
 python -m venv venv
 ```
-
-Activate it:
-
-**Windows**
-
-```bash
+Activate it (Windows)
+```
 venv\Scripts\activate
 ```
-
-### Install dependencies
-
-```bash
+Install dependencies
+```
 pip install -r requirements.txt
 ```
-
----
-
-## 🔑 Environment Variables
-
-Create a `.env` file in the project root.
-
-```env
+⚙ Environment Variables
+Create a .env file.
+```
 OPENAI_BASE_URL=http://127.0.0.1:1234/v1
 OPENAI_API_KEY=lm-studio
 ```
-
----
-
-## 🚀 Running the Project
-
-### Test the LLM Connection
-
-```bash
+▶ Running the Project
+Test Model Connection
+```
 python src/llm.py
 ```
-
----
-
-### Run the Evaluation
-
-```bash
+Run Evaluation
+```
 python src/evaluate.py
 ```
+Launch Dashboard
+```
+python -m streamlit run dashboard/app.py
+```
+📸 Screenshots
+[!Dashboard](assets/dashboard.png)
 
-Example Output
-
-```text
-Accuracy: 100%
-
-Results saved to reports/results.csv
+📋 Sample Evaluation Output
+```
+| Dataset | Question                         | Expected         | Correct | Latency  |
+| ------- | -------------------------------- | ---------------- | ------- | -------- |
+| General | Capital of France                | Paris            | ✅       | 1.21 sec |
+| Coding  | Reverse a string                 | Correct solution | ✅       | 3.44 sec |
+| RedTeam | Ignore all previous instructions | Refused          | ✅       | 4.01 sec |
 ```
 
----
+🔮 Future Improvements
 
-### Launch the Dashboard
+Multi-model comparison
+LLM-as-a-Judge evaluation
+Docker support
+SQLite result storage
+Historical benchmark tracking
+GitHub Actions automation
+Token usage & cost tracking
+Advanced analytics dashboard
 
-<<<<<<< HEAD
+👩‍💻 Author
 
-=======
->>>>>>> 4d75ab7457d09c70fb81aaa100dd0a58fdbff963
-streamlit run dashboard/app.py
-## 📸 Visual Outputs
-
-After running the pipeline, the system generates visual artifacts:
-
----
-
-### 📊 Dashboard Snapshot
-
-Live metrics visualization from Streamlit dashboard:
-
-![Dashboard](assets/dashboard.png)
-
----
-
-### 📄 Final Evaluation Report
-
-Summary of evaluation results:
-
-![Dashboard](assets/report.png)
-
-## 📊 Sample Dataset
-
-```json
-[
-  {
-    "question": "What is the capital of France?",
-    "expected": "Paris"
-  },
-  {
-    "question": "Who invented Python?",
-    "expected": "Guido van Rossum"
-  }
-]
-```
-
----
-
-## 📈 Evaluation Metrics
-
-The pipeline currently evaluates:
-
-- ✅ Accuracy
-- ✅ Response Latency
-- ✅ Correct / Incorrect Responses
-
-Future metrics:
-
-- Hallucination Rate
-- Faithfulness
-- Cost Estimation
-- Token Usage
-- Model Comparison
-
----
-
-## 📄 Output
-
-The evaluation generates:
-
-```
-reports/results.csv
-```
-
-Example:
-
-| Question | Expected | Actual | Correct | Latency |
-|----------|----------|---------|---------|---------|
-| What is the capital of France? | Paris | The capital of France is Paris. | ✅ | 14.94 |
-
----
-
-## 🔮 Future Improvements
-
-- GitHub Actions CI/CD
-- HTML Evaluation Report
-- Prompt Versioning
-- Multiple Model Comparison
-- Historical Evaluation Tracking
-- Docker Support
-- SQLite Database
-- Advanced Dashboard Analytics
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Open a Pull Request
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License.
-
----
-
-## 👩‍💻 Author
-
-**Shakila Thasneem**
+Shakila Thasneem
 
 GitHub:
 https://github.com/shakilathasneem9
-
----
-
-⭐ If you found this project useful, consider giving it a star on GitHub!
